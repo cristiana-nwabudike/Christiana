@@ -1,216 +1,973 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Admin Portfolio - [Your Name]</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the Inter font and general aesthetics */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light blue-gray background */
-            color: #334155; /* Darker text */
-        }
-        .header-gradient {
-            background-image: linear-gradient(to right, #4c51bf, #667eea); /* Purple-blue gradient */
-        }
-        .btn-primary {
-            @apply inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 ease-in-out;
-        }
-        .card {
-            @apply bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 ease-in-out;
-        }
-        .section-title {
-            @apply text-4xl font-extrabold text-gray-800 mb-8 text-center;
-        }
-    </style>
-</head>
-<body class="antialiased">
+Gemini
 
-    <!-- Header Section -->
-    <header class="header-gradient text-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center">
-            <div class="text-3xl font-bold rounded-lg p-2">
-                [Your Name]
-            </div>
-            <ul class="flex space-x-6 mt-4 sm:mt-0">
-                <li><a href="#about" class="hover:text-blue-200 transition-colors duration-200">About</a></li>
-                <li><a href="#skills" class="hover:text-blue-200 transition-colors duration-200">Skills</a></li>
-                <li><a href="#portfolio" class="hover:text-blue-200 transition-colors duration-200">Portfolio</a></li>
-                <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-200">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+2.5 Flash
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-6 text-center shadow-inner">
-        <div class="container mx-auto max-w-4xl">
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
-                [Your Name]
-            </h1>
-            <p class="text-2xl md:text-3xl font-light mb-8 animate-fade-in-up">
-                Senior Salesforce Administrator | CPQ Configuration & Flow Automation Expert
-            </p>
-            <a href="#portfolio" class="btn-primary animate-scale-in">View My Projects</a>
-        </div>
-    </section>
+Upgrade
 
-    <!-- About Section -->
-    <section id="about" class="py-16 px-6 bg-white">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="section-title">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center md:space-x-8">
-                <div class="mb-8 md:mb-0 md:w-1/3">
-                    <!-- Placeholder image, replace with your actual photo -->
-                    <img src="https://placehold.co/300x300/e0e7ff/4338ca?text=Your+Photo" alt="Your Photo" class="rounded-full shadow-lg mx-auto w-48 h-48 object-cover border-4 border-indigo-300">
-                </div>
-                <div class="md:w-2/3 text-lg text-gray-700 leading-relaxed">
-                    <p class="mb-4">
-                        As a highly experienced Senior Salesforce Administrator, I specialize in optimizing Salesforce instances to drive business efficiency and enhance user experience. My expertise lies in comprehensive Salesforce administration, including user management, security, data integrity, and custom object development.
-                    </p>
-                    <p class="mb-4">
-                        I have a proven track record in **Salesforce CPQ configuration**, enabling businesses to streamline their quoting processes, manage complex pricing rules, and automate contract generation. I am adept at translating complex business requirements into robust CPQ solutions that accelerate sales cycles and ensure accuracy.
-                    </p>
-                    <p>
-                        Furthermore, I am a master of **Salesforce Flow automation**, designing and implementing powerful declarative automations to automate complex business processes, improve data quality, and reduce manual effort across various departments. From simple screen flows to intricate record-triggered flows, I leverage Flow Builder to deliver scalable and maintainable solutions. My goal is to empower users and maximize the return on investment from Salesforce.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-6 bg-gray-50">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Salesforce Administration</h3>
-                    <ul class="list-disc list-inside text-gray-600">
-                        <li>User & Profile Management</li>
-                        <li>Security & Sharing Models</li>
-                        <li>Data Management & Governance</li>
-                        <li>Custom Objects & Fields</li>
-                        <li>Report & Dashboard Creation</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Salesforce CPQ</h3>
-                    <ul class="list-disc list-inside text-gray-600">
-                        <li>Product & Price Book Configuration</li>
-                        <li>Bundle & Option Setup</li>
-                        <li>Pricing Rules & Discount Schedules</li>
-                        <li>Quote Templates & Document Generation</li>
-                        <li>Contract & Subscription Management</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Salesforce Flow Automation</h3>
-                    <ul class="list-disc list-inside text-gray-600">
-                        <li>Screen Flows, Record-Triggered Flows</li>
-                        <li>Scheduled & Platform Event Flows</li>
-                        <li>Approval Processes & Process Builder (Legacy)</li>
-                        <li>Data Manipulation with Flow</li>
-                        <li>Integration with External Systems (via Flow)</li>
-                    </ul>
-                </div>
-                <div class="card col-span-1 md:col-span-2 lg:col-span-1">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Other Technical Skills</h3>
-                    <ul class="list-disc list-inside text-gray-600">
-                        <li>Declarative Development</li>
-                        <li>Change Management</li>
-                        <li>Requirement Gathering</li>
-                        <li>Training & Support</li>
-                        <li>Sales & Service Cloud</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-16 px-6 bg-white">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="section-title">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <!-- Portfolio Project 1 Placeholder -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/c7d2fe/3730a3?text=Project+1+Image" alt="Project 1" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">CPQ Implementation for SaaS Company</h3>
-                    <p class="text-gray-600 mb-4">
-                        Designed and implemented a comprehensive Salesforce CPQ solution, reducing quote generation time by 50% and improving pricing accuracy. Involved complex product bundles, dynamic pricing rules, and automated quote approvals.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-sm">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Salesforce CPQ</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Process Automation</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Sales Cloud</span>
-                    </div>
-                    <!-- Add a link to a detailed project page or case study if available -->
-                    <a href="#" class="mt-4 inline-block text-indigo-600 hover:underline">Learn More &rarr;</a>
-                </div>
+Conversation with Gemini
+you are a senior salesforce administrator with skills in cpq configuration and flow automation, create a full html portfolio template that is modern responsive and can list your future portfolio project
 
-                <!-- Portfolio Project 2 Placeholder -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/bfdbfe/1e3a8a?text=Project+2+Image" alt="Project 2" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Automated Onboarding Flow for New Users</h3>
-                    <p class="text-gray-600 mb-4">
-                        Developed a multi-step Salesforce Flow to automate the onboarding process for new employees, including task assignments, permission set assignments, and welcome email triggers.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-sm">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Salesforce Flow</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">User Management</span>
-                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Service Cloud</span>
-                    </div>
-                    <a href="#" class="mt-4 inline-block text-indigo-600 hover:underline">Learn More &rarr;</a>
-                </div>
 
-                <!-- Portfolio Project 3 Placeholder (Add more as needed) -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/dbeafe/1e40af?text=Project+3+Image" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Data Quality Improvement with Validation Rules & Flows</h3>
-                    <p class="text-gray-600 mb-4">
-                        Implemented a series of validation rules and record-triggered flows to enforce data standards, significantly reducing data entry errors and improving reporting accuracy.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-sm">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Data Governance</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Salesforce Flow</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Data Integrity</span>
-                    </div>
-                    <a href="#" class="mt-4 inline-block text-indigo-600 hover:underline">Learn More &rarr;</a>
-                </div>
 
-            </div>
-            <p class="text-center text-gray-600 text-lg mt-12">
-                More projects coming soon!
-            </p>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 bg-gray-50">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Have a project in mind or just want to connect? Feel free to reach out!
-            </p>
-            <div class="space-y-4">
-                <p class="text-xl text-gray-800">Email: <a href="mailto:your.email@example.com" class="text-indigo-600 hover:underline">your.email@example.com</a></p>
-                <p class="text-xl text-gray-800">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-indigo-600 hover:underline">linkedin.com/in/yourprofile</a></p>
-                <!-- Add other contact methods like a personal website or phone if desired -->
-            </div>
-        </div>
-    </section>
+Show thinking
+I can certainly help you create a modern and responsive HTML portfolio template! This template will highlight your skills as a Salesforce Administrator with CPQ configuration and Flow automation expertise and provide a great structure for showcasing your future projects.
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-6 text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <p class="text-sm mt-2">Built with <span class="text-red-400">&hearts;</span> and Tailwind CSS</p>
-        </div>
-    </footer>
+Here's the HTML code for your portfolio template:
+Salesforce & nCino Admin Portfolio - Creative Blue Theme
+Jun 23, 11:10 PM
 
-</body>
-</html>
+This template provides a solid foundation for your professional portfolio. Remember to replace the placeholder [Your Name], email, LinkedIn profile, and project details with your actual information!
+
+Key Features of this Template:
+Modern Design: Clean layout, rounded corners, and subtle shadows for a contemporary look.
+Responsive: Built with Tailwind CSS, it adapts gracefully to different screen sizes (mobile, tablet, desktop).
+Clear Sections: Includes dedicated sections for About Me, Skills, Portfolio, and Contact, making it easy to navigate.
+Highlighting Skills: Specifically calls out your expertise in Salesforce CPQ and Flow Automation in the "About Me" and "Skills" sections.
+Project Placeholders: The "Portfolio" section has example project cards that you can easily duplicate and populate with your own work, including images, descriptions, and relevant tags.
+Easy Customization: All styling is done using Tailwind CSS classes, making it straightforward to modify colors, fonts, and layouts directly in the HTML.
+Next Steps:
+Replace Placeholders: Fill in your actual name, contact information, and detailed descriptions for your skills and projects.
+Add Your Photo: Replace the placehold.co image URL in the "About Me" section with a link to your professional headshot.
+Detail Your Projects: For each portfolio item, provide specific challenges, solutions, and measurable outcomes. Consider linking to separate case studies or detailed descriptions if you have them.
+Consider a Favicon: Add a small icon that appears in the browser tab for a more polished feel.
+I hope this helps you build an impressive portfolio! Let me know if you'd like any modifications or further assistance.
+
+
+
+
+
+you are a senior salesforce administrator here is your resume:
+
+Christiana Nwabudike
+
+Salesforce Professional
+
+(437) 261-3269
+
+cristiana.nwabudike@gmail.com
+
+capitalfountainltd5-deved.
+
+develop.my.site.com/Portfolio
+
+Calgary, AB
+
+S U M M A R Y
+
+Salesforce Professional with over 5 years of progressive IT experience and a strong background in Service Cloud, Sales Cloud, and
+
+Financial Service Cloud. Skilled in designing, optimizing, and translating technical business requirements into scalable Salesforce
+
+solutions across industries. Proven track record of delivering enhancements based on evolving business needs, automating
+
+manual processes, managing product backlogs, and improving user experience through effective stakeholder collaboration.
+
+C E R T I F I C A T E S
+
+Salesforce Data Cloud Consultant 12/2024 - Present
+
+Salesforce Certified Agentforce Specialist 11/2024 - Present
+
+Salesforce Certified Experience Cloud Consultant 01/2024 - Present
+
+Salesforce Certified Business Analyst 11/2023 - Present
+
+Salesforce Certified AI Associate 10/2023 - Present
+
+Salesforce Advanced Administrator 04/2023 - Present
+
+Salesforce Certified Platform App Builder 12/2022 - Present
+
+Salesforce Certified Sales Cloud Consultant 12/2022 - Present
+
+Salesforce Associate 09/2022 - Present
+
+Salesforce Certified Service Cloud Consultant 09/2022 - Present
+
+Salesforce Certified Administrator 08/2022 - Present
+
+S K I L L S
+
+GTM Tools
+
+Deployment
+
+Azure
+
+Data Loader
+
+Gainsight
+
+LinkeIn Sales Navigator
+
+Gong
+
+ZoomInfo
+
+SOQL
+
+User Provisioning
+
+Sharing Setting
+
+Validation Rule
+
+Salesforce Flow
+
+Salesforce Inspector
+
+Release Notes Development
+
+Agile Methodology
+
+User Guide Document
+
+Stakeholder Managment
+
+Cross-functional Collaboration
+
+Requirement Gathering
+
+Backlog Grooming
+
+User Training
+
+Deployment
+
+SOQL
+
+Reports and Dashboards
+
+Security Managment
+
+Data Quality
+
+Salesforce Inspector
+
+Root Cause Analysis
+
+Release Testing
+
+Release Management
+
+Sandbox Managment
+
+1 / 3
+
+E X P E R I E N C E
+
+Sr Salesforce Administrator 02/2025 - Present
+
+Hootsuite Inc.
+
+Rebuilt key product bundles, price rules, product rules, and configuration attributes in so sales reps could quote faster and more
+
+accurately, reducing the back-and-forth with ContractOps and eliminating common quoting errors.
+
+Took the lead on multiple CPQ cleanup efforts, identified misconfigured pricing logic, retired unused product records, and
+
+worked through technical debt that had been slowing down quote performance .
+
+Designed Advanced Approvals to support multi-layer deal reviews, implementing dynamic routing based on region and discount
+
+thresholds.
+
+Customized quote line editor layout and pricing behaviour to reflect unique pricing tiers, reducing manual adjustments and
+
+helping reps stay compliant.
+
+Designed quote templates to include branding, legal T&Cs, and regional variations.
+
+Salesforce Administrator 01/2023 - 02/2025
+
+Affinity Credit Union
+
+Designed training and technical documentation for Salesforce users and future Salesforce Admins, improving adoption rates,
+
+System Admin onboarding and empowering teams to leverage Salesforce capabilities effectively.
+
+Provided troubleshooting and technical support for over 800 Salesforce users, providing solution options and effectively
+
+communicating the benefits and drawbacks of each solution.
+
+Collaborated with cross functional teams to deliver Salesforce solutions that meets and exceeds business expectations and
+
+improves efficiency.
+
+Configured Salesforce automation resulting in 5,837 clicks saved annually, creating a more efficient and optimized user
+
+experience.
+
+Led regular backlog grooming sessions and worked with stakeholders to prioritize new requests, contributing to an agile and
+
+responsive development process.
+
+Designed and maintained dashboards and reports to provide actionable insights and monitor member portfolio, empowering
+
+stakeholders with real time data for informed decision making.
+
+Sr. Salesforce Administrator 08/2020 - 11/2022
+
+Capital Fountain
+
+Managed day to day administration of Salesforce across sales and service teams, managing custom development, user
+
+support, SKU Creation and Management, and system enhancements that streamlined business operations and improved user
+
+adoption.
+
+Oversaw data integrations and managing user provisioning between Salesforce and GTM tools like ZoomInfo, Gong, Nintex,
+
+GainSight, and DocuSign, proactively resolving sync issues and user access.
+
+Created documentation and delivered tailored training to frontline users and managers, equipping teams to get the most out of
+
+Salesforce.
+
+Built and optimized flows, configuration rules, and constraint rules to improve product selection logic and enforce business
+
+rules.
+
+Supported custom Salesforce CPQ logic in collaboration with Contract Operations, Sales Operations, Rev Ops Leadership and
+
+Partner Managers to roll out SKUs aligned with pricing policies, packaging strategy, and compliance requirements.
+
+Configured Salesforce CPQ elements including product bundles, price rules, quote templates, and configuration attributes to
+
+streamline the quote-to-cash process.
+
+Operations Manager 04/2018 - 08/2020
+
+Capital fountain
+
+Oversaw day-to-day operational processes and supported strategic initiatives to enhance customer experience.
+
+Managed cross-functional coordination with internal and external partners to ensure timely service delivery.
+
+Led reporting efforts and implemented metrics dashboards for executive decision making.
+
+P R O J E C T S
+
+Fee and Disbursement Automation for Commercial Lending
+
+Automated the creation and calculation of disbursements from fee records using Salesforce flows to streamline operations and
+
+ensure accuracy.
+
+2 / 3
+
+Accomplishments:
+
+Designed flow to automatically generate and calculate disbursement records, with seamless synchronization to the core
+
+banking system, reducing manual entry and ensuring real time data accuracy.
+
+Created a validation rule to prevent third-party fees from being waived, ensuring compliance with financial policies and
+
+maintaining accurate reporting.
+
+Created a validation rule to ensure that disbursement amounts could only be modified through their associated fee records,
+
+preserving data consistency and enforcing proper process controls.
+
+Ensured that when fee records are deleted, all associated disbursement records are automatically removed, and the loan’s
+
+disbursement aggregate is recalculated in real time to maintain data integrity.
+
+Fee and Rate Discretion Controls Implementation
+
+Improved governance and transparency by implementing a Salesforce based system for managing fee and rate discretion
+
+approvals.
+
+Accomplishments:
+
+Built custom objects to log fee/rate adjustments and their business justification.
+
+Used flows and approval processes to route high-discretion cases to designated approvers.
+
+Reduced processing delays and ensured 100% audit traceability for all discretionary decisions.
+
+Configured real time field updates and notifications to relevant teams upon fee approval, improving transparency and reducing
+
+manual processing time by 50%.
+
+Loan Borrowing Structure Optimization
+
+Spearheaded the restructuring of borrowing members and loan structures for complex business lending using flow.
+
+Accomplishments:
+
+Automated the transfer of shareholders listed on the relationship tab to the loan borrowing structure as guarantors,
+
+streamlining data entry and ensuring consistency across related lending records.
+
+Created advanced report types and dashboards for visibility into exposure across borrower groups.
+
+Enabled more accurate risk assessment and compliance monitoring, reducing audit discrepancies by 30%.
+
+Credit Review Automation and Enhancement
+
+Led the redesign and automation of the Credit Review process by configuring Salesforce flows to eliminate manual record
+
+creation and tracking.
+
+Accomplishments:
+
+Configured automation that eliminated repetitive manual steps, saving users over 5,000 clicks annually and significantly
+
+improving operational efficiency.
+
+Configured formula field to provide real time guidance on approval readiness, helping users understand why a record may not
+
+meet submission criteria and proactively resolve issues. Overcoming Salesforce’s default “no applicable approval process”
+
+error by clearly outlining unmet conditions.
+
+Automated the creation of template records, saving the lending and adjudication teams over 9,000 hours of manual work
+
+annually, boosting productivity and accelerating review turnaround times.
+
+E D U C A T I O N
+
+Organisation Managment 02/2020 - 10/2020
+
+Cambrian College - Postgraduate Degree
+
+International Relations 10/2010 - 07/2013
+
+Houdegebe North American University - Bachelors Degree
+
+V O L U N T E E R I N G
+
+Souls Harbour Rescue Mission
+
+create a full html portfolio template that is modern responsive and can list my portfolio project
+
+
+
+
+Show thinking
+I've updated your Salesforce Administrator portfolio template on the Canvas to incorporate the details from your resume, showcasing your extensive experience, certifications, and projects.
+
+Here's the updated HTML code:
+
+I've integrated the following information from your resume into the Canvas:
+
+Contact Details: Your name, email, phone number, and personal site URL are now prominently displayed and linked in the header and contact section.
+About Me Section: The summary from your resume has been incorporated, providing a detailed overview of your experience and expertise.
+Skills Section: Your comprehensive list of skills has been categorized and included under "Skills & Expertise."
+New Certifications Section: A dedicated section now lists all your Salesforce certifications with their respective dates.
+New Experience Section: Your work history, including companies, roles, dates, and key responsibilities/accomplishments, has been added.
+Projects Section: The placeholder projects have been replaced with the detailed projects from your resume, including descriptions and relevant skill tags.
+New Education Section: Your educational background is now included.
+New Volunteering Section: Details about your volunteering experience have been added.
+This updated portfolio template now provides a more comprehensive and personalized representation of your professional background. Let me know if you'd like any further adjustments!
+
+
+
+
+
+remove the experience section
+
+
+
+Show thinking
+I've updated your Salesforce Administrator portfolio to remove the "Experience" section, as well as its corresponding link in the navigation bar.
+
+Here's the revised HTML:
+
+
+
+
+
+i also have ncino administrator experience here is my resume, can you throw that in the mix and help develop a suitable portfolio
+
+
+
+Show thinking
+Please provide the details of your nCino Administrator experience from your resume. Once I have those details, I can integrate them into your portfolio template, potentially adding:
+
+A new section or updated existing sections in "Skills & Expertise" to highlight nCino proficiency.
+A new entry in an "Experience" section (if we decide to bring it back) or a dedicated section if you have a significant nCino-focused role.
+New project examples in your "My Projects" section that showcase your nCino accomplishments.
+
+
+
+
+
+Accomplished Salesforce and nCino expert with 11 certifications and a proven track record in
+
+platform optimization, business automation, and user adoption. Expertise in Salesforce Sales,
+
+Service, Financial Services Cloud, and nCino workflows. Known for driving user adoption to
+
+100%, automating processes to save over 25,000 hours annually, and delivering seamless
+
+deployments with 99.9% success rates.
+
+Skills
+
+ Salesforce/nCino Tools: Flow Builder, Data
+
+Loader, Salesforce Inspector, SOQL, Reports
+
+and Dashboards, Validation Rules, Formula
+
+Fields, Forms Manager.
+
+ Development &amp; Integration: Azure,
+
+AutoRabit, Data Migration, Third-Party
+
+Integration (e.g., DocuSign, SharePoint,
+
+Nintex)
+
+ Data Management &amp; Security: User Roles,
+
+Profiles, Permissions set.
+
+
+
+ Documentation &amp; Project Management:
+
+Process Mapping, Training Material
+
+Development, Agile Methodology, Technical
+
+Documentation
+
+ Communication &amp; Consulting: Stakeholder
+
+Management, Cross-Functional
+
+Communication, Problem Solving, Detail-
+
+Oriented, Adaptable
+
+
+
+Certifications
+
+ nCino Commercial Banking 201
+
+ Salesforce Advance Administrator
+
+ Salesforce Certified Administrator
+
+ Salesforce Certified Business Analyst
+
+ Salesforce Certified Sales Cloud Consultant
+
+ Salesforce Certified AI Associate
+
+ Salesforce Certified AI Specialist
+
+
+
+ Salesforce Certified Service Cloud Consultant
+
+ Salesforce Certified Experience Cloud
+
+Consultant
+
+ Salesforce Certified Platform App Builder
+
+ Salesforce Associate
+
+ Salesforce Certified Data Cloud Consultant
+
+
+
+KEY ACCOMPLISHMENTS
+
+ Architectural Leadership: Designed scalable nCino workflows, improving operational
+
+efficiency across departments.
+
+ Automation Excellence: Saved over 25,000 hours annually by automating loan guarantor
+
+addition and credit review processes.
+
+ User Management &amp; Compliance: Managed 825 users, enforcing access control policies
+
+and ensuring alignment with compliance frameworks while providing training that
+
+boosted user adoption to 100%.
+
+ Optimized Decision-Making: Delivered real-time insights via Salesforce dashboards,
+
+increasing strategic efficiency by 7%.
+
+ Release Management &amp; Deployment Success: Managed four environments with 99.9%
+
+deployment success, mitigating risks by thoroughly reviewing release notes and testing
+
+configurations before production rollouts.
+
+Work Experience
+
+nCino Administrator
+
+Affinity Credit Union | Regina, Saskatchewan | Jan 2023-Current
+
+Rate Discretion and Fee Waiver Approval Process:
+
+ Built custom objects, fields, and formula fields to ensure proper approvals for rate
+
+discretion and fee waivers.
+
+ Configured validation rules to prevent stage change without approval.
+
+ Designed two-step approval processes to escalate fee waivers or rate discretion
+
+approvals to senior management based on thresholds.
+
+Borrowing Structure Automation:
+
+ Configured a flow to automatically add business owners linked through connections
+
+route at the account level as loan guarantors.
+
+Disbursement Route Automation:
+
+ Created custom fields to support flows that automate the addition of cash and financed
+
+fees to the disbursement route.
+
+ Product Package Approval Guidance:
+
+ Built formula fields to provide lenders with completion checklists before submitting
+
+product packages for approval.
+
+Risk Rating Integration:
+
+ Designed custom fields, a screen flow and a button to pull in the latest risk ratings for
+
+product packages and credit reviews, ensuring compliance with financial policies.
+
+UI-Level One Exception Management:
+
+ Configured custom routes, route groups, screens, conditional lookup and approval
+
+processes to streamline exception handling for loans.
+
+ Reconfigured product package approval criteria to account for level one policy
+
+exceptions.
+
+
+
+Automated Credit Review Creation:
+
+ Developed a scheduled flow to assess financial year-end date and create credit reviews
+
+templates based on predefined criteria.
+
+ Configured a triggered flow to automatically escalate reviews to adjudication when
+
+specific thresholds are exceeded.
+
+Smart Checklist, Document Manager and Forms Management:
+
+ Configured over 15 forms, including credit memos, using nCino syntax.
+
+ Created over 20 loan and account document placeholders and over 10 smart checklist
+
+requirements.
+
+Fee Management:
+
+ Configured standard fees in nCino and implemented validations to prevent
+
+unauthorized fee waivers and ensure compliance with percentage thresholds for loan
+
+applications.
+
+Reporting and Dashboards:
+
+ Developed admin monitoring dashboards to track user activity and ensure data integrity
+
+across synced environments.
+
+ Created a detailed admin guide to support the resolution of user tickets and onboarding
+
+of new admins.
+
+Release Management:
+
+ Reviewed nCino release notes, performed rigorous pre-release testing, and resolved
+
+potential issues before production roll out date.
+
+Sandbox and Deployment Management:
+
+ Managed multi-environment deployments using AutoRabit to ensure consistency across
+
+environments.
+
+In-App Guidance:
+
+ Configured guidance prompts to inform users of feature updates before and after
+
+deployments.
+
+Stakeholder Engagement:
+
+ Facilitated meetings with various stakeholder groups to gather requirements and
+
+present the pros and cons of recommended solutions.
+
+ Developed and maintained strong relationships with different lenders, loan processors
+
+and adjudication teams to ensure consistent and seamless collaboration.
+
+ Managed stakeholder expectations by providing clear and timely updates on builds.
+
+User Story and Acceptance Criteria:
+
+ Translated stakeholder requirements into actionable user stories that guide
+
+configurations.
+
+ Created comprehensive user story documentation, including wireframes and flowchats
+
+to support builds.
+
+ Validated user stories by conducting UAT and gathering feedback from stakeholders to
+
+ensure alignment with requirement.
+
+
+
+Salesforce Administrator
+
+Capital Fountain | Victoria Island, Lagos | Aug 2020-Nov 2022
+
+DocuSign Integration:
+
+ Successfully integrated DocuSign with Salesforce to facilitate document signing for
+
+accepted rate proposals.
+
+Approval Process Automation:
+
+ Configured custom fields to support multi-step approval processes for foreign exchange
+
+rate discretion.
+
+App Manager:
+
+ Designed custom Salesforce apps tailored to the needs of trade and accounting teams,
+
+improving operational efficiency.
+
+Validation Rules Implementation:
+
+ Developed and implemented several validation rules to ensure data integrity and
+
+improve data quality.
+
+Salesforce UI Customization:
+
+ Configured page layouts and Lightning record pages to deliver a comprehensive 360-
+
+degree customer view.
+
+User Access Management:
+
+ Oversaw profiles, permission sets, roles, and licenses to ensure secure and appropriate
+
+access controls.
+
+Process Documentation:
+
+ Created process mapping documents to outline current and future workflows for rate
+
+negotiation and fund transfers.
+
+User Training &amp; Enablement:
+
+ Developed comprehensive training manuals and video tutorials for every newly
+
+implemented Salesforce feature, ensuring clarity and user-friendliness.
+
+ Organized and facilitated monthly user training sessions to demonstrate new features,
+
+best practices, and upcoming changes, improving user adoption and engagement.
+
+ Led User Acceptance Testing (UAT) sessions by collaborating with a designated User
+
+Champion Group, equipping them with hands-on experience and generating excitement
+
+for upcoming feature releases.
+
+Operations Manager
+
+Capital Fountain | Victoria Island, Lagos | Apr 2018-Aug 2020
+
+ Managed multiple projects, focusing on operational efficiencies and team performance,
+
+leading to a 6% increase in customer satisfaction.
+
+ Oversaw contract administration processes, contributing to a 9.3% increase in sales
+
+profit through effective negotiation and process optimization.
+
+ Collaborated with cross-functional teams to drive operational process improvements,
+
+ensuring alignment with business goals.
+
+
+
+Education
+
+Postgraduate Diploma: Organization Management
+
+Cambrian College of Applied Arts and Technology | | Greater Sudbury, ON | Oct 2022
+
+First Degree: BA. International Relations
+
+Houdegbe North American University | Cotonu, Republic of Benin | Oct 2013
+
+Activities and Honors
+
+ 48 Suberbadges
+
+ Double Star Ranger
+
+
+
+
+Show thinking
+I can certainly incorporate your nCino Administrator experience and the additional details from your resume into your portfolio. This will significantly strengthen your profile by showcasing your expertise in both Salesforce and nCino platforms.
+
+I've updated your portfolio template on the Canvas to include:
+
+A comprehensive "About Me" section that highlights your combined Salesforce and nCino expertise and key accomplishments.
+Updated and re-categorized "Skills & Expertise" to include nCino-specific tools and broader skill sets.
+An expanded "Certifications" section with your nCino certification.
+A re-introduced and detailed "Experience" section, featuring your nCino Administrator role and updated details for your previous Salesforce and Operations Manager positions.
+Explicit mentions of nCino where relevant within your "Projects" section to highlight that specific platform's usage.
+An "Activities and Honors" section.
+Updated navigation links to reflect all new and re-ordered sections.
+Here's the updated HTML code for your portfolio:
+
+Your portfolio now prominently features your expertise across both Salesforce and nCino platforms, detailing your specific contributions and impact.
+
+Key Changes Made:
+About Me: Updated to reflect your "Accomplished Salesforce and nCino expert" status, highlighting your 11 certifications and the significant impact of your work (e.g., 100% user adoption, 25,000+ hours saved annually).
+Skills & Expertise:
+The "Salesforce & nCino Tools" card now explicitly includes nCino and Forms Manager.
+The "Development & Integration" card now lists additional GTM tools from your resume.
+"Data Management & Security" and "Communication & Consulting" sections are more aligned with your resume's breakdown.
+"Documentation & Project Management" now includes "User Story and Acceptance Criteria."
+Certifications: The nCino Commercial Banking 201 certification has been added.
+Experience Section Re-introduced: This crucial section is back!
+nCino Administrator (Affinity Credit Union): This new, detailed entry captures all the impressive nCino-specific accomplishments from your resume, including process automation, risk rating integration, and release management.
+Salesforce Administrator (Capital Fountain): Updated with the more granular accomplishments provided, such as DocuSign integration, approval processes, and detailed user training.
+Operations Manager (Capital Fountain): Updated with the key achievements from your resume.
+Projects Section: The existing project descriptions have been enhanced to clearly indicate when nCino was involved, using the specific names for the nCino features (Disbursement Route Automation, Rate Discretion and Fee Waiver Approval Process, etc.) where relevant. This clarifies the connection between your projects and your nCino experience.
+Education: Updated with the precise dates and locations.
+Activities & Honors: A new section to showcase your "48 Superbadges" and "Double Star Ranger" status.
+Navigation: The header navigation now includes Experience and Activities & Honors for easy access.
+This portfolio is now a much stronger reflection of your comprehensive skill set and impactful career. Let me know if you need any further refinements!
+
+
+
+
+
+remove the experince section
+
+
+
+Show thinking
+I've updated your portfolio to remove the "Experience" section and its corresponding link from the navigation bar.
+
+Here's the revised HTML:
+
+
+
+
+
+in the about me section, correct the number of certification to 12. remove salesforce certified AI specialist from my certifications. my project section add 2 salesforce projects to what is currently there. remove volunteering section. in contact me section, remove website, add trailhead link https://www.salesforce.com/trailblazer/cnwabudike202 and make trailhead, email and phone clickable licks that navigate to the right page or initiates a call in the case of phone.
+
+
+
+
+Show thinking
+I've updated your portfolio template as requested!
+
+Here are the specific changes I've made:
+
+About Me Section: The number of certifications has been updated to 12.
+Certifications Section: "Salesforce Certified AI Specialist" has been removed.
+Projects Section: I've added two new Salesforce-specific project placeholders. You can fill these in with your actual project details.
+Volunteering Section: This section has been removed entirely.
+Contact Me Section: The "Website" link has been replaced with your "Trailhead" link, and all links (Email, Phone, Trailhead) are now properly clickable.
+Here's the updated HTML code for your portfolio:
+
+
+
+
+
+great. remove all the ** I see on the page. In Skills and Expertise, remove brackets from (e.g., DocuSign, SharePoint, Nintex, ZoomInfo, Gong, Gainsight). add nCino syntax, DocManger, Smart Checklist, Approval Process, Data Loader and Salesforce Inspector to salesforce and nCino Tools and remove sales cloud service cloud and financial service cloud.
+
+
+
+
+Show thinking
+
+
+
+
+remove e.g., from e.g., DocuSign, SharePoint, Nintex, ZoomInfo, Gong, Gainsight. remove ' that i see on the page. Add justify text alignment to make the text look well alligned.
+
+
+
+
+Show thinking
+I've updated your portfolio template as requested!
+
+Here are the specific changes:
+
+All instances of ** (which rendered as bold text) have been removed from the content.
+In the "Skills & Expertise" section, under "Development & Integration", e.g., has been removed.
+The text-justify class has been added to the paragraphs in the "About Me" section to ensure the text is well-aligned.
+Here's the updated HTML code for your portfolio:
+
+
+
+
+
+i still see ' in some of the text, for example `Disbursement Route Automation` and `Fee Management` elements.
+
+
+
+Show thinking
+I've reviewed the portfolio again and removed the single quotes (`) from the project descriptions to ensure all text formatting is consistent.
+
+Here's the updated HTML code for your portfolio:
+
+
+
+
+
+great! now add my linkedin www.linkedin.com/in/christiana-nwabudike. could you make the linkedlin, email and trailhead to be icons that link out to my various profiles
+
+
+
+
+Show thinking
+I've updated your portfolio to include your LinkedIn profile and to use icons for the LinkedIn, email, and Trailhead links in the contact section, making them visually appealing and easily clickable.
+
+Here's the revised HTML:
+
+
+
+
+
+thank you. finally, can you add relevant images that reflects the banner topic to each banner under my projects
+
+
+
+Show thinking
+I've updated your portfolio to include relevant images for each project banner, making your portfolio more visually engaging and reflective of your work.
+
+Here's the revised HTML with specific images for each project:
+
+
+
+
+
+nah! i wanted pictorial representations
+
+
+
+Show thinking
+I've updated your portfolio to include relevant pictorial representations for each project banner using descriptive placeholder images that reflect the topic of each project. This will make your portfolio more visually engaging.
+
+Here's the updated HTML code for your portfolio:
+
+
+
+
+
+i like the blue team, but can you change the template to something more appealing, engaging and fun that showcases my skills as a salesforce/ncino professional
+
+
+
+
+Show thinking
+I can definitely give your portfolio a more appealing, engaging, and fun look while keeping it professional and highlighting your Salesforce and nCino expertise!
+
+I'm going to update the color scheme, introduce more vibrant gradients, and adjust some stylistic elements to give it a fresh, dynamic feel. The new design will aim for a modern, energetic, and user-friendly experience.
+
+Here's the updated HTML code for your portfolio:
+
+
+
+
+
+
+nope! can you do something like this
+
+
+
+Show thinking
+I understand you're looking for a more refined, professional, and document-like aesthetic, similar to the portfolio template shown in the image you provided. I'll adjust the current design to match that clean, structured, and elegant style, focusing on a more subdued color palette, clearer content blocks, and a simplified layout.
+
+Here's the updated HTML code for your portfolio, reflecting this new design direction:
+
+
+
+
+
+this is still not working for me. I want something creative and unique blue themed
+
+
+
+Show thinking
+I understand completely! My apologies that the previous design didn't hit the mark. You're looking for a portfolio that's truly creative, unique, and blue-themed, moving beyond a flat, document-like presentation.
+
+Let's craft a design that feels modern, dynamic, and distinctly you, while still professionally showcasing your Salesforce and nCino expertise. I'll leverage various shades of blue, subtle gradients, and a more engaging layout to achieve that fresh, vibrant look.
+
+Here's a brand new, blue-themed, and more artistic HTML portfolio template for you:
+
+
+
+
+
+Welcome to Gemini, your personal AI assistant
+
+
+Google TermsOpens in a new window and the Gemini Apps Privacy NoticeOpens in a new window apply. Chats are reviewed and used to improve Google AI. Learn about your choicesOpens in a new window. Gemini can make mistakes, so double-check it. Info about your locationOpens in a new window is also stored with your Gemini Apps activity.
+
+
+
+
+
+Deep Research
+
+Canvas
+
+Gemini can make mistakes, so double-check it
+
+Salesforce & nCino Admin Portfolio - Creative Blue Theme
+
+
+
+Code
+Preview
+
+Share
+
+123456789101112131415161718192021222324252627282930313233343536373839
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Christiana Nwabudike - Salesforce & nCino Portfolio</title>    <!-- Tailwind CSS CDN -->    <script src="https://cdn.tailwindcss.com"></script>    <!-- Font Awesome CDN for icons -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    <style>        /* Custom styles for the Inter font and general aesthetics */        body {            font-family: 'Inter', sans-serif;            background-color: #e0f2f7; /* Very light blue background */            color: #2c3e50; /* Dark blue-gray for main text */        }        /* Header and Hero specific styling */        .header-bg {            background-color: #1a5276; /* Darker blue for header */            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);        }        .hero-section {            background: linear-gradient(135deg, #2196f3, #0d47a1); /* Dynamic blue gradient */            color: white;            position: relative;            overflow: hidden;        }        .hero-section::before {            content: '';            position: absolute;            top: -50%;            left: -50%;            width: 200%;            height: 200%;            background: rgba(255, 255, 255, 0.1);            transform: rotate(45deg);            animation: moveGradient 15s infinite linear;            pointer-events: none;
+
