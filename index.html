@@ -21,28 +21,40 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .hero-section {
-            background: linear-gradient(135deg, #2196f3, #0d47a1); /* Dynamic blue gradient */
-            color: white;
             position: relative;
             overflow: hidden;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(45deg);
-            animation: moveGradient 15s infinite linear;
-            pointer-events: none;
+            background: #0d47a1; /* Solid dark blue fallback */
+            min-height: 400px; /* Ensure sufficient height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            color: white;
         }
 
-        /* Gradient animation for hero section */
-        @keyframes moveGradient {
-            0% { transform: rotate(0deg) translate(0, 0); }
-            100% { transform: rotate(360deg) translate(50%, 50%); }
+        .hero-background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: fadeInScale 3s ease-out forwards; /* Fade in and subtle scale */
+            filter: brightness(0.7) blur(1px); /* Darken and blur for text legibility */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Stronger text shadow for legibility */
+        }
+
+        /* Hero specific animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         /* Buttons with gradient and subtle hover effect */
@@ -110,6 +122,33 @@
         /* Text justification for paragraphs */
         p {
             text-align: justify;
+            word-wrap: break-word; /* Ensure long words break */
+            overflow-wrap: break-word; /* Modern equivalent */
+        }
+
+        /* Project image banners with improved text legibility and padding */
+        .project-image-banner {
+            width: 100%;
+            height: 12rem; /* Consistent height */
+            background-color: #1a73e8; /* Solid blue background for consistency */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.75rem; /* Larger font size */
+            font-weight: bold;
+            text-align: center;
+            border-radius: 0.375rem; /* Matches rounded-md */
+            margin-bottom: 1.5rem; /* Matches mb-6 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Stronger text shadow for legibility */
+            padding: 0 1.5rem; /* Increased padding to prevent text cutoff */
+            box-sizing: border-box; /* Include padding in width/height */
+        }
+
+        /* Adjust card padding for overall content */
+        .card {
+            padding: 2rem; /* Increased padding within cards */
         }
     </style>
 </head>
@@ -133,8 +172,9 @@
     </header>
 
     <!-- Hero Section (Dynamic Banner) -->
-    <section class="hero-section py-32 px-6 text-center">
-        <div class="container mx-auto max-w-5xl relative z-10">
+    <section class="hero-section">
+        <img src="https://storage.googleapis.com/gemini-generated-images-sm/images/6df432e3-0d6a-4645-a745-f09c693a1529.jpeg" alt="Salesforce and nCino abstract art background" class="hero-background-image">
+        <div class="hero-content">
             <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
                 Christiana Nwabudike
             </h1>
@@ -259,7 +299,9 @@
 
                 <!-- Project: Fee and Disbursement Automation for Commercial Lending (nCino) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/add8e6/1976d2?text=Financial+Flows" alt="Financial Automation Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Financial Automation
+                    </div>
                     <h3 class="sub-section-title">nCino Fee & Disbursement Automation for Commercial Lending</h3>
                     <p class="text-gray-700 mb-4">
                         Automated the creation and calculation of disbursements from fee records using nCino-integrated Salesforce flows, streamlining operations and ensuring data accuracy. This includes the Disbursement Route Automation and Fee Management elements.
@@ -279,7 +321,9 @@
 
                 <!-- Project: Fee and Rate Discretion Controls Implementation (nCino) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/90caf9/1976d2?text=Approval+Workflows" alt="Approval Control Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Approval Workflows
+                    </div>
                     <h3 class="sub-section-title">nCino Fee & Rate Discretion Controls Implementation</h3>
                     <p class="text-gray-700 mb-4">
                         Improved governance and transparency by implementing a Salesforce-based system within nCino for managing fee and rate discretion approvals, aligning with Rate Discretion and Fee Waiver Approval Process.
@@ -300,7 +344,9 @@
 
                 <!-- Project: Loan Borrowing Structure Optimization (nCino) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/64b5f6/1976d2?text=Structured+Lending" alt="Loan Structure Optimization Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Structured Lending
+                    </div>
                     <h3 class="sub-section-title">nCino Loan Borrowing Structure Optimization</h3>
                     <p class="text-gray-700 mb-4">
                         Spearheaded the restructuring and automation of borrowing members and loan structures for complex business lending using nCino flows, aligning with Borrowing Structure Automation.
@@ -320,7 +366,9 @@
 
                 <!-- Project: Credit Review Automation and Enhancement (nCino) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/42a5f5/1976d2?text=Automated+Reviews" alt="Credit Review Automation Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Automated Reviews
+                    </div>
                     <h3 class="sub-section-title">nCino Credit Review Automation & Enhancement</h3>
                     <p class="text-gray-700 mb-4">
                         Led the redesign and automation of the Credit Review process by configuring nCino-integrated Salesforce flows, eliminating manual record creation and tracking, aligning with Automated Credit Review Creation.
@@ -341,7 +389,9 @@
 
                 <!-- NEW Project 1: Salesforce Sales Process Optimization -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/2196f3/1976d2?text=Sales+Productivity" alt="Sales Process Optimization Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Sales Productivity
+                    </div>
                     <h3 class="sub-section-title">Salesforce Sales Process Optimization</h3>
                     <p class="text-gray-700 mb-4">
                         Streamlined lead-to-opportunity conversion and sales pipeline management using advanced Salesforce configurations and automation.
@@ -360,7 +410,9 @@
 
                 <!-- NEW Project 2: Salesforce Service Cloud Enhancement -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/1e88e5/1976d2?text=Customer+Service+Excellence" alt="Service Cloud Enhancement Project" class="rounded-md mb-6 w-full h-48 object-cover shadow-sm">
+                    <div class="project-image-banner">
+                        Customer Service Excellence
+                    </div>
                     <h3 class="sub-section-title">Salesforce Service Cloud Enhancement</h3>
                     <p class="text-gray-700 mb-4">
                         Enhanced customer service operations by implementing new Service Cloud features and automating case management workflows.
