@@ -29,7 +29,7 @@
             position: relative;
             overflow: hidden;
             background-color: #0A192F; /* Deep navy fallback */
-            min-height: 550px; /* Adjusted min-height for a balanced hero section */
+            min-height: 650px; /* Reverted to taller hero for stronger presence */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,10 +43,10 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 90%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             object-fit: cover; /* Back to 'cover' to fill space */
-            animation: heroImageAnimation 25s ease-in-out infinite alternate; /* Slower, smoother animation */
+            animation: heroImageAnimation 20s ease-in-out infinite alternate; /* Slower, smoother animation */
         }
 
         .hero-overlay {
@@ -69,7 +69,7 @@
         /* Hero image specific animation */
         @keyframes heroImageAnimation {
             0% { transform: scale(1); filter: brightness(1); }
-            50% { transform: scale(1.05); filter: brightness(0.95); } /* Increased scale for more noticeable animation */
+            50% { transform: scale(1.06); filter: brightness(0.95); } /* Reverted to more noticeable animation scale */
             100% { transform: scale(1); filter: brightness(1); }
         }
 
@@ -525,7 +525,541 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-14 px-8 text-center">
         <div class="container mx-auto">
+            <p class="text-lg">&copy; 2025 Christiana Nwabudike. All rights reserved.</p><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christiana Nwabudike - Salesforce & nCino Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for the Inter font and general aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Very light grayish-blue background */
+            color: #4A5568; /* Dark gray for main text */
+            line-height: 1.8; /* Generous line spacing for readability */
+        }
+        /* Header styling */
+        .header-bg {
+            background-color: #2C5282; /* Steel Blue for a lighter header */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            z-index: 50; /* Ensure header stays on top */
+            position: sticky;
+            top: 0;
+        }
+        /* Hero section with image and overlay */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            background-color: #0A192F; /* Deep navy fallback */
+            min-height: 650px; /* Reverted to taller hero for stronger presence */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 6rem 1.5rem;
+            color: white;
+        }
+
+        .hero-background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Back to 'cover' to fill space */
+            animation: heroImageAnimation 20s ease-in-out infinite alternate; /* Slower, smoother animation */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Adjusted Gradient overlay for better image visibility */
+            background: linear-gradient(to bottom, rgba(10, 25, 47, 0.5), rgba(44, 82, 130, 0.3)); /* Lighter opacities */
+            z-index: 5; /* Below content, above image */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10; /* Ensures content is on top */
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 1); /* Even stronger text shadow for legibility */
+        }
+
+        /* Hero image specific animation */
+        @keyframes heroImageAnimation {
+            0% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.06); filter: brightness(0.95); } /* Reverted to more noticeable animation scale */
+            100% { transform: scale(1); filter: brightness(1); }
+        }
+
+        /* Buttons with subtle gradient and hover effect */
+        .btn-primary {
+            @apply inline-block px-12 py-5 text-xl font-bold text-white rounded-full shadow-xl transition-all duration-300 ease-in-out;
+            background: linear-gradient(45deg, #2C5282, #63B3ED); /* Steel Blue to Sky Blue */
+            box-shadow: 0 8px 18px rgba(44, 82, 130, 0.5);
+            letter-spacing: 0.08em;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #63B3ED, #2C5282);
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 12px 25px rgba(44, 82, 130, 0.7);
+        }
+
+        /* Card styling with elegant lift */
+        .card {
+            @apply bg-white p-10 rounded-2xl shadow-xl border border-gray-100; /* Subtle border */
+            transition: all 0.5s cubic-bezier(.25,.8,.25,1); /* Smoother animation */
+            transform: perspective(1px) translateZ(0);
+        }
+        .card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+            transform: translateY(-12px); /* More significant lift */
+        }
+
+        /* Section Titles with modern and professional touch */
+        .section-title {
+            @apply text-5xl font-extrabold text-gray-800 mb-20 text-center relative;
+            letter-spacing: 0.1em; /* More spaced letters for elegance */
+            padding-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px; /* Longer underline */
+            height: 8px; /* Thicker underline */
+            background: linear-gradient(90deg, #2C5282, #63B3ED);
+            margin: 1.5rem auto 0;
+            border-radius: 5px;
+        }
+
+        /* List items styling */
+        .list-item-bullet {
+            @apply list-disc list-inside text-gray-700 mb-2 leading-relaxed;
+        }
+
+        /* Sub-section titles */
+        .sub-section-title {
+            @apply text-3xl font-bold text-gray-700 mb-5;
+            border-bottom: 2px solid #e5e7eb; /* More prominent underline for sub-sections */
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: left; /* Ensure sub-titles are left-aligned within cards */
+        }
+
+        /* Icon links in contact section */
+        .icon-link {
+            color: #2C5282; /* Explicit color for consistency */
+            @apply hover:text-63B3ED transition-colors duration-300 text-5xl;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3)); /* More prominent shadow */
+        }
+        .icon-link:hover {
+            transform: scale(1.25); /* More noticeable scale */
+        }
+
+        /* Profile image with an elegant border and adjusted position */
+        .profile-img {
+            border: 12px solid #2C5282; /* Matched to header-bg color */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            object-position: 50% 65%; /* Adjusted to move image content further down */
+        }
+
+        /* Text justification for paragraphs */
+        p {
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Project image banners with enhanced legibility and professional style */
+        .project-image-banner {
+            width: 100%;
+            height: 16rem; /* Even taller banners for maximum impact */
+            background-color: #2C5282; /* Steel Blue for banners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem; /* Largest, most impactful text */
+            font-weight: black; /* Extra bold for prominence */
+            text-align: center;
+            border-radius: 1rem; /* More rounded corners */
+            margin-bottom: 2.5rem; /* More spacing */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Very strong text shadow */
+            padding: 0 3rem; /* Ample padding to prevent any text cutoff */
+            box-sizing: border-box; /* Include padding in width/height */
+        }
+
+        /* Adjust card padding for overall content */
+        .card {
+            padding: 2.5rem; /* Increased padding within cards */
+        }
+        .card p, .card ul {
+            padding: 0; /* Remove internal padding if affecting text */
+            margin-left: 0.5rem; /* For list bullets alignment */
+            text-align: left; /* Ensure text within cards is left-aligned */
+        }
+
+        /* Alternating section backgrounds for visual interest */
+        .section-light {
+            background-color: #F0F4F8;
+        }
+        .section-white {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section (Navigation) -->
+    <header class="header-bg text-white shadow-lg">
+        <nav class="container mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-4xl font-extrabold tracking-wider">
+                Christiana Nwabudike
+            </div>
+            <ul class="flex space-x-10 mt-6 sm:mt-0 text-xl font-medium">
+                <li><a href="#about" class="hover:text-sky-300 transition-colors duration-200">About</a></li>
+                <li><a href="#skills" class="hover:text-sky-300 transition-colors duration-200">Skills</a></li>
+                <li><a href="#certifications" class="hover:text-sky-300 transition-colors duration-200">Certifications</a></li>
+                <li><a href="#portfolio" class="hover:text-sky-300 transition-colors duration-200">Projects</a></li>
+                <li><a href="#education" class="hover:text-sky-300 transition-colors duration-200">Education</a></li>
+                <li><a href="#contact" class="hover:text-sky-300 transition-colors duration-200">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Dynamic Banner with your image) -->
+    <section class="hero-section">
+        <img src="https://raw.githubusercontent.com/cristiana-nwabudike/Christiana/main/Portfolio%20Image.png" alt="Salesforce and nCino background" class="hero-background-image">
+        <div class="hero-overlay"></div> <!-- Overlay for text legibility -->
+        <div class="hero-content">
+            <h1 class="text-7xl md:text-8xl font-extrabold leading-tight mb-8">
+                Christiana Nwabudike
+            </h1>
+            <p class="text-4xl md:text-5xl font-light mb-12">
+                Salesforce & nCino Administrator | CPQ, Flow & Workflow Automation Expert
+            </p>
+            <a href="#portfolio" class="btn-primary">Explore My Impactful Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-28 px-8 section-white shadow-2xl rounded-2xl max-w-7xl mx-auto my-20">
+        <div class="container mx-auto">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-20">
+                <div class="mb-16 md:mb-0 md:w-1/3 flex justify-center">
+                    <img src="https://raw.githubusercontent.com/cristiana-nwabudike/Christiana/main/6F25B341-FE62-4190-9466-7DDA0C478B91_1_105_c.jpeg" alt="Christiana Nwabudike Photo" class="rounded-full shadow-2xl w-72 h-72 object-cover profile-img">
+                </div>
+                <div class="md:w-2/3 text-xl text-gray-700 leading-relaxed">
+                    <p class="mb-6">
+                        An accomplished Salesforce and nCino expert with 12 certifications and over 5 years of progressive IT experience, I have a proven track record in platform optimization, business automation, and user adoption. My expertise spans Salesforce Sales Cloud, Service Cloud, Financial Services Cloud, and comprehensive nCino workflows.
+                    </p>
+                    <p class="mb-6">
+                        I specialize in designing, optimizing, and translating complex business requirements into scalable Salesforce and nCino solutions. My focus is on driving efficiency and improving user experience through effective stakeholder collaboration, automating manual processes, and managing product backlogs. I am known for driving user adoption to 100%, automating processes to save over 25,000 hours annually, and delivering seamless deployments with 99.9% success rates.
+                    </p>
+                    <p>
+                        My proficiency extends to Salesforce CPQ configuration, enabling businesses to streamline their quoting processes, manage complex pricing rules, and automate contract generation. Furthermore, I am a master of Salesforce Flow automation, designing and implementing powerful declarative automations to automate complex business processes, improve data quality, and reduce manual effort. My goal is to empower users and maximize the return on investment from both Salesforce and nCino platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">SKILLS & EXPERTISE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+                <div class="card">
+                    <h3 class="sub-section-title">Salesforce & nCino Tools</h3>
+                    <ul class="list-item-bullet">
+                        <li>Flow Builder, Data Loader, Salesforce Inspector</li>
+                        <li>SOQL, Reports and Dashboards</li>
+                        <li>Validation Rules, Formula Fields, Forms Manager</li>
+                        <li>nCino syntax, DocManager, Smart Checklist, Approval Process</li>
+                        <li>Salesforce CPQ</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="sub-section-title">Development & Integration</h3>
+                    <ul class="list-item-bullet">
+                        <li>Azure, AutoRabit</li>
+                        <li>Data Migration, Third-Party Integration</li>
+                        <li>DocuSign, SharePoint, Nintex, ZoomInfo, Gong, Gainsight</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="sub-section-title">Data Management & Security</h3>
+                    <ul class="list-item-bullet">
+                        <li>User Roles, Profiles, Permission Sets</li>
+                        <li>User Provisioning, Sharing Setting</li>
+                        <li>Security Management</li>
+                        <li>Data Quality & Governance</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="sub-section-title">Documentation & Project Management</h3>
+                    <ul class="list-item-bullet">
+                        <li>Process Mapping, User Guide Document</li>
+                        <li>Training Material Development</li>
+                        <li>Agile Methodology, Backlog Grooming</li>
+                        <li>Release Notes Development, Release Testing & Management</li>
+                        <li>Sandbox Management & Deployment</li>
+                        <li>Root Cause Analysis</li>
+                        <li>User Story and Acceptance Criteria</li>
+                    </ul>
+                </div>
+                <div class="card col-span-1 md:col-span-2 lg:col-span-1">
+                    <h3 class="sub-section-title">Communication & Consulting</h3>
+                    <ul class="list-item-bullet">
+                        <li>Stakeholder Management</li>
+                        <li>Cross-Functional Communication & Collaboration</li>
+                        <li>Problem Solving, Detail-Oriented, Adaptable</li>
+                        <li>User Training & Enablement</li>
+                        <li>Requirement Gathering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">CERTIFICATIONS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-xl text-gray-700 pt-4">
+                <ul class="list-item-bullet">
+                    <li>nCino Commercial Banking 201</li>
+                    <li>Salesforce Data Cloud Consultant</li>
+                    <li>Salesforce Certified Agentforce Specialist</li>
+                    <li>Salesforce Certified Experience Cloud Consultant</li>
+                    <li>Salesforce Certified Business Analyst</li>
+                    <li>Salesforce Certified AI Associate</li>
+                </ul>
+                <ul class="list-item-bullet">
+                    <li>Salesforce Advanced Administrator</li>
+                    <li>Salesforce Certified Platform App Builder</li>
+                    <li>Salesforce Certified Sales Cloud Consultant</li>
+                    <li>Salesforce Certified Service Cloud Consultant</li>
+                    <li>Salesforce Associate</li>
+                    <li>Salesforce Certified Administrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Projects) -->
+    <section id="portfolio" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">MY IMPACTFUL PROJECTS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+
+                <!-- Project: Fee and Disbursement Automation for Commercial Lending (nCino) -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Financial Automation
+                    </div>
+                    <h3 class="sub-section-title">nCino Fee & Disbursement Automation for Commercial Lending</h3>
+                    <p class="text-gray-700 mb-4">
+                        Automated the creation and calculation of disbursements from fee records using nCino-integrated Salesforce flows, streamlining operations and ensuring data accuracy. This includes the Disbursement Route Automation and Fee Management elements.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Designed nCino-integrated flow to automatically generate and calculate disbursement records with seamless synchronization to the core banking system, reducing manual entry.</li>
+                        <li>Created validation rules to prevent third-party fees from being waived and to ensure disbursement amounts are modified only through associated fee records, ensuring compliance.</li>
+                        <li>Ensured automatic removal of associated disbursement records upon fee deletion, with real-time recalculation of loan's disbursement aggregate to maintain data integrity.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">nCino</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Flow</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Financial Service Cloud</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full font-semibold">Data Integrity</span>
+                    </div>
+                </div>
+
+                <!-- Project: Fee and Rate Discretion Controls Implementation (nCino) -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Approval Workflows
+                    </div>
+                    <h3 class="sub-section-title">nCino Fee & Rate Discretion Controls Implementation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Improved governance and transparency by implementing a Salesforce-based system within nCino for managing fee and rate discretion approvals, aligning with Rate Discretion and Fee Waiver Approval Process.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Built custom objects, fields, and formula fields in nCino to ensure proper approvals for rate discretion and fee waivers.</li>
+                        <li>Configured validation rules in nCino to prevent stage change without approval.</li>
+                        <li>Designed two-step approval processes to escalate fee waivers or rate discretion approvals to senior management based on thresholds, ensuring 100% audit traceability.</li>
+                        <li>Configured real-time field updates and notifications to relevant teams upon fee approval, improving transparency and reducing manual processing time by 50%.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">nCino</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Flow</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Approval Processes</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full font-semibold">Data Governance</span>
+                    </div>
+                </div>
+
+                <!-- Project: Loan Borrowing Structure Optimization (nCino) -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Structured Lending
+                    </div>
+                    <h3 class="sub-section-title">nCino Loan Borrowing Structure Optimization</h3>
+                    <p class="text-gray-700 mb-4">
+                        Spearheaded the restructuring and automation of borrowing members and loan structures for complex business lending using nCino flows, aligning with Borrowing Structure Automation.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Configured a flow to automatically add business owners linked through connections route at the account level as loan guarantors in nCino, streamlining data entry and ensuring consistency.</li>
+                        <li>Created advanced report types and dashboards for visibility into exposure across borrower groups.</li>
+                        <li>Enabled more accurate risk assessment and compliance monitoring, reducing audit discrepancies by 30%.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">nCino</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Flow</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Reporting & Dashboards</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full font-semibold">Data Consistency</span>
+                    </div>
+                </div>
+
+                <!-- Project: Credit Review Automation and Enhancement (nCino) -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Automated Reviews
+                    </div>
+                    <h3 class="sub-section-title">nCino Credit Review Automation & Enhancement</h3>
+                    <p class="text-gray-700 mb-4">
+                        Led the redesign and automation of the Credit Review process by configuring nCino-integrated Salesforce flows, eliminating manual record creation and tracking, aligning with Automated Credit Review Creation.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Developed a scheduled flow in nCino to assess financial year-end date and create credit review templates based on predefined criteria.</li>
+                        <li>Configured a triggered flow to automatically escalate reviews to adjudication when specific thresholds are exceeded.</li>
+                        <li>Configured formula field to provide real-time guidance on approval readiness, helping users understand why a record may not meet submission criteria.</li>
+                        <li>Automated the creation of template records, saving lending and adjudication teams over 9,000 hours of manual work annually, boosting productivity and accelerating review turnaround times.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">nCino</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Flow</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Process Optimization</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full font-semibold">Efficiency</span>
+                    </div>
+                </div>
+
+                <!-- NEW Project 1: Salesforce Sales Process Optimization -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Sales Productivity
+                    </div>
+                    <h3 class="sub-section-title">Salesforce Sales Process Optimization</h3>
+                    <p class="text-gray-700 mb-4">
+                        Streamlined lead-to-opportunity conversion and sales pipeline management using advanced Salesforce configurations and automation.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Implemented custom lead assignment rules and automated email alerts to sales representatives, improving lead response time by 20%.</li>
+                        <li>Designed and configured complex approval processes for discounted opportunities, reducing manual review time by 30%.</li>
+                        <li>Developed sales dashboards and reports providing real-time insights into team performance and pipeline health, enabling data-driven decisions.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Sales Cloud</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Flow</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Process Optimization</span>
+                    </div>
+                </div>
+
+                <!-- NEW Project 2: Salesforce Service Cloud Enhancement -->
+                <div class="card">
+                    <div class="project-image-banner">
+                        Customer Service Excellence
+                    </div>
+                    <h3 class="sub-section-title">Salesforce Service Cloud Enhancement</h3>
+                    <p class="text-gray-700 mb-4">
+                        Enhanced customer service operations by implementing new Service Cloud features and automating case management workflows.
+                    </p>
+                    <ul class="list-item-bullet text-base">
+                        <li>Configured Omni-Channel routing to efficiently distribute incoming cases to the appropriate support agents, reducing case queue times.</li>
+                        <li>Implemented Service Level Agreements (SLAs) and escalation rules to ensure timely resolution of critical customer issues.</li>
+                        <li>Developed a knowledge base with key articles and FAQs, empowering agents and enabling self-service for customers, decreasing inbound calls by 15%.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm mt-6">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-semibold">Salesforce Service Cloud</span>
+                        <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full font-semibold">Case Management</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-1 rounded-full font-semibold">Customer Experience</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-xl text-gray-700 pt-4">
+                <div class="card">
+                    <h3 class="sub-section-title">Postgraduate Diploma: Organisation Management</h3>
+                    <p class="text-gray-700 font-medium">Cambrian College of Applied Arts and Technology | Greater Sudbury, ON</p>
+                    <p class="text-gray-600 text-base">Oct 2022</p>
+                </div>
+                <div class="card">
+                    <h3 class="sub-section-title">Bachelor's Degree: BA. International Relations</h3>
+                    <p class="text-gray-700 font-medium">Houdegbe North American University | Cotonu, Republic of Benin</p>
+                    <p class="text-gray-600 text-base">Oct 2013</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities and Honors Section -->
+    <section id="activities" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">ACTIVITIES & HONORS</h2>
+            <div class="card text-xl text-gray-700 pt-4">
+                <ul class="list-item-bullet">
+                    <li>48 Superbadges</li>
+                    <li>Double Star Ranger</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title">GET IN TOUCH</h2>
+            <p class="text-xl text-gray-700 mb-12 pt-4">
+                Have a project in mind or just want to connect? Feel free to reach out!
+            </p>
+            <div class="flex justify-center space-x-10">
+                <a href="mailto:cristiana.nwabudike@gmail.com" class="icon-link" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+14372613269" class="icon-link" title="Phone"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://www.linkedin.com/in/christiana-nwabudike" target="_blank" class="icon-link" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.salesforce.com/trailblazer/cnwabudike202" target="_blank" class="icon-link" title="Trailhead Profile"><i class="fas fa-mountain"></i></a>
+            </div>
+            <p class="text-2xl text-gray-800 font-semibold mt-10">Location: Calgary, AB</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-14 px-8 text-center">
+        <div class="container mx-auto">
             <p class="text-lg">&copy; 2025 Christiana Nwabudike. All rights reserved.</p>
+            <p class="text-sm mt-4">Built with ❤️ and Tailwind CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
         </div>
     </footer>
 
