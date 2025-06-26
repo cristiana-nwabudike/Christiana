@@ -15,14 +15,16 @@
             background-color: #f0f4f8; /* Very light grayish-blue background */
             color: #4A5568; /* Dark gray for main text */
             line-height: 1.8; /* Generous line spacing for readability */
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
         /* Header styling */
         .header-bg {
             background-color: #2C5282; /* Steel Blue for a lighter header */
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
             z-index: 50; /* Ensure header stays on top */
-            position: sticky;
+            position: sticky; /* Make header sticky */
             top: 0;
+            width: 100%; /* Ensure it spans full width when sticky */
         }
         /* Hero section with image and overlay */
         .hero-section {
@@ -190,6 +192,12 @@
         .section-white {
             background-color: #FFFFFF;
         }
+
+        /* Active navigation link styling */
+        .nav-link.active {
+            color: #63B3ED; /* Sky Blue for active link */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -201,12 +209,14 @@
                 Christiana Nwabudike
             </div>
             <ul class="flex space-x-10 mt-6 sm:mt-0 text-xl font-medium">
-                <li><a href="#about" class="hover:text-sky-300 transition-colors duration-200">About</a></li>
-                <li><a href="#skills" class="hover:text-sky-300 transition-colors duration-200">Skills</a></li>
-                <li><a href="#certifications" class="hover:text-sky-300 transition-colors duration-200">Certifications</a></li>
-                <li><a href="#portfolio" class="hover:text-sky-300 transition-colors duration-200">Projects</a></li>
-                <li><a href="#education" class="hover:text-sky-300 transition-colors duration-200">Education</a></li>
-                <li><a href="#contact" class="hover:text-sky-300 transition-colors duration-200">Contact</a></li>
+                <li><a href="#about" class="nav-link hover:text-sky-300 transition-colors duration-200">About</a></li>
+                <li><a href="#skills" class="nav-link hover:text-sky-300 transition-colors duration-200">Skills</a></li>
+                <li><a href="#certifications" class="nav-link hover:text-sky-300 transition-colors duration-200">Certifications</a></li>
+                <li><a href="#superbadges" class="nav-link hover:text-sky-300 transition-colors duration-200">Superbadges</a></li>
+                <li><a href="#portfolio" class="nav-link hover:text-sky-300 transition-colors duration-200">Projects</a></li>
+                <li><a href="#education" class="nav-link hover:text-sky-300 transition-colors duration-200">Education</a></li>
+                <li><a href="#activities" class="nav-link hover:text-sky-300 transition-colors duration-200">Activities</a></li>
+                <li><a href="#contact" class="nav-link hover:text-sky-300 transition-colors duration-200">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -225,15 +235,15 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section (Reverted to full-width but with refined content layout) -->
     <section id="about" class="py-28 px-8 section-white shadow-2xl rounded-2xl max-w-7xl mx-auto my-20">
         <div class="container mx-auto">
             <h2 class="section-title">ABOUT ME</h2>
-            <div class="flex flex-col md:flex-row items-center md:space-x-20">
-                <div class="mb-16 md:mb-0 md:w-1/3 flex justify-center">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-20">
+                <div class="mb-16 lg:mb-0 lg:w-1/3 flex justify-center">
                     <img src="https://raw.githubusercontent.com/cristiana-nwabudike/Christiana/main/6F25B341-FE62-4190-9466-7DDA0C478B91_1_105_c.jpeg" alt="Christiana Nwabudike Photo" class="rounded-full shadow-2xl w-72 h-72 object-cover profile-img">
                 </div>
-                <div class="md:w-2/3 text-xl text-gray-700 leading-relaxed">
+                <div class="lg:w-2/3 text-xl text-gray-700 leading-relaxed">
                     <p class="mb-6">
                         An accomplished Salesforce and nCino expert with 12 certifications and over 5 years of progressive IT experience, I have a proven track record in platform optimization, business automation, and user adoption. My expertise spans Salesforce Sales Cloud, Service Cloud, Financial Services Cloud, and comprehensive nCino workflows.
                     </p>
@@ -248,11 +258,12 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section (Re-designed for a cleaner grid) -->
     <section id="skills" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
         <div class="container mx-auto">
             <h2 class="section-title">SKILLS & EXPERTISE</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Skill Card: Salesforce & nCino Tools -->
                 <div class="card">
                     <h3 class="sub-section-title">Salesforce & nCino Tools</h3>
                     <ul class="list-item-bullet">
@@ -263,6 +274,7 @@
                         <li>Salesforce CPQ</li>
                     </ul>
                 </div>
+                <!-- Skill Card: Development & Integration -->
                 <div class="card">
                     <h3 class="sub-section-title">Development & Integration</h3>
                     <ul class="list-item-bullet">
@@ -271,6 +283,7 @@
                         <li>DocuSign, SharePoint, Nintex, ZoomInfo, Gong, Gainsight</li>
                     </ul>
                 </div>
+                <!-- Skill Card: Data Management & Security -->
                 <div class="card">
                     <h3 class="sub-section-title">Data Management & Security</h3>
                     <ul class="list-item-bullet">
@@ -280,7 +293,8 @@
                         <li>Data Quality & Governance</li>
                     </ul>
                 </div>
-                <div class="card col-span-1 md:col-span-2 lg:col-span-1">
+                <!-- Skill Card: Documentation & Project Management -->
+                <div class="card">
                     <h3 class="sub-section-title">Documentation & Project Management</h3>
                     <ul class="list-item-bullet">
                         <li>Process Mapping, User Guide Document</li>
@@ -292,7 +306,8 @@
                         <li>User Story and Acceptance Criteria</li>
                     </ul>
                 </div>
-                <div class="card col-span-1 md:col-span-2 lg:col-span-1">
+                <!-- Skill Card: Communication & Consulting (spans 2 columns on larger screens) -->
+                <div class="card md:col-span-2 lg:col-span-1">
                     <h3 class="sub-section-title">Communication & Consulting</h3>
                     <ul class="list-item-bullet">
                         <li>Stakeholder Management</li>
@@ -331,8 +346,69 @@
         </div>
     </section>
 
+    <!-- Superbadges Section -->
+    <section id="superbadges" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="section-title">SUPERBADGES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-xl text-gray-700 pt-4">
+                <ul class="list-item-bullet">
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Access Governance Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>App Customization Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Approval Process Management Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Approval Process Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Approval Process Troubleshooting Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Business Administration Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Data Model Optimization Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Data Protection Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Data Quality Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Data Standardization Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Data Validation Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Financial Services Cloud Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Administration Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Collections and Loops Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Data Collections Optimization Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Debugging Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Elements and Resources Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Error Handling Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Fundamentals Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Interactions Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Management Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Flow Optimization Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Formulas Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Lightning Analyst Super Set</li>
+                </ul>
+                <ul class="list-item-bullet">
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Lightning Experience Reports & Dashboards Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Lightning Implementation Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Object Relationships Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Process Automation Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Record-Triggered Flow Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Accounts Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Cloud and Console Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Customer Relationship Management Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Opportunities Management Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Opportunities Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Path and Interactions Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Sales Products and Quotes Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Screen Flow Distribution Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Screen Flow Fundamentals Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Screen Flow Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Screenless Flow Specialist Superbadge</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Scheduled Flow and Subflow Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Security and Performance Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Selling Specialist Super Set</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Selling with Sales Cloud Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>Service Cloud Specialist</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>User Access Fundamentals Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>User Access Troubleshooting Superbadge Unit</li>
+                    <li><i class="fas fa-award text-blue-500 mr-3"></i>User Experience Superbadge Unit</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section (Projects) -->
-    <section id="portfolio" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+    <section id="portfolio" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
         <div class="container mx-auto">
             <h2 class="section-title">MY IMPACTFUL PROJECTS</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
@@ -343,9 +419,13 @@
                         Financial Automation
                     </div>
                     <h3 class="sub-section-title">nCino Fee & Disbursement Automation for Commercial Lending</h3>
-                    <p class="text-gray-700 mb-4">
-                        Automated the creation and calculation of disbursements from fee records using nCino-integrated Salesforce flows, streamlining operations and ensuring data accuracy. This includes the Disbursement Route Automation and Fee Management elements.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Automated the creation and calculation of disbursements from fee records using nCino-integrated Salesforce flows.</li>
+                        <li>Streamlined operations and ensured data accuracy.</li>
+                        <li>This includes the Disbursement Route Automation and Fee Management elements.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Designed nCino-integrated flow to automatically generate and calculate disbursement records with seamless synchronization to the core banking system, reducing manual entry.</li>
                         <li>Created validation rules to prevent third-party fees from being waived and to ensure disbursement amounts are modified only through associated fee records, ensuring compliance.</li>
@@ -365,9 +445,12 @@
                         Approval Workflows
                     </div>
                     <h3 class="sub-section-title">nCino Fee & Rate Discretion Controls Implementation</h3>
-                    <p class="text-gray-700 mb-4">
-                        Improved governance and transparency by implementing a Salesforce-based system within nCino for managing fee and rate discretion approvals, aligning with Rate Discretion and Fee Waiver Approval Process.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Improved governance and transparency by implementing a Salesforce-based system within nCino for managing fee and rate discretion approvals.</li>
+                        <li>Aligned with Rate Discretion and Fee Waiver Approval Process.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Built custom objects, fields, and formula fields in nCino to ensure proper approvals for rate discretion and fee waivers.</li>
                         <li>Configured validation rules in nCino to prevent stage change without approval.</li>
@@ -388,9 +471,12 @@
                         Structured Lending
                     </div>
                     <h3 class="sub-section-title">nCino Loan Borrowing Structure Optimization</h3>
-                    <p class="text-gray-700 mb-4">
-                        Spearheaded the restructuring and automation of borrowing members and loan structures for complex business lending using nCino flows, aligning with Borrowing Structure Automation.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Spearheaded the restructuring and automation of borrowing members and loan structures for complex business lending using nCino flows.</li>
+                        <li>Aligned with Borrowing Structure Automation.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Configured a flow to automatically add business owners linked through connections route at the account level as loan guarantors in nCino, streamlining data entry and ensuring consistency.</li>
                         <li>Created advanced report types and dashboards for visibility into exposure across borrower groups.</li>
@@ -410,9 +496,12 @@
                         Automated Reviews
                     </div>
                     <h3 class="sub-section-title">nCino Credit Review Automation & Enhancement</h3>
-                    <p class="text-gray-700 mb-4">
-                        Led the redesign and automation of the Credit Review process by configuring nCino-integrated Salesforce flows, eliminating manual record creation and tracking, aligning with Automated Credit Review Creation.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Led the redesign and automation of the Credit Review process by configuring nCino-integrated Salesforce flows.</li>
+                        <li>Eliminated manual record creation and tracking, aligning with Automated Credit Review Creation.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Developed a scheduled flow in nCino to assess financial year-end date and create credit review templates based on predefined criteria.</li>
                         <li>Configured a triggered flow to automatically escalate reviews to adjudication when specific thresholds are exceeded.</li>
@@ -433,9 +522,11 @@
                         Sales Productivity
                     </div>
                     <h3 class="sub-section-title">Salesforce Sales Process Optimization</h3>
-                    <p class="text-gray-700 mb-4">
-                        Streamlined lead-to-opportunity conversion and sales pipeline management using advanced Salesforce configurations and automation.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Streamlined lead-to-opportunity conversion and sales pipeline management using advanced Salesforce configurations and automation.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Implemented custom lead assignment rules and automated email alerts to sales representatives, improving lead response time by 20%.</li>
                         <li>Designed and configured complex approval processes for discounted opportunities, reducing manual review time by 30%.</li>
@@ -454,9 +545,11 @@
                         Customer Service Excellence
                     </div>
                     <h3 class="sub-section-title">Salesforce Service Cloud Enhancement</h3>
-                    <p class="text-gray-700 mb-4">
-                        Enhanced customer service operations by implementing new Service Cloud features and automating case management workflows.
-                    </p>
+                    <!-- Main descriptive points for this project -->
+                    <ul class="list-item-bullet text-gray-700 mb-4 text-base">
+                        <li>Enhanced customer service operations by implementing new Service Cloud features and automating case management workflows.</li>
+                    </ul>
+                    <!-- Detailed accomplishments for this project, now properly bulleted -->
                     <ul class="list-item-bullet text-base">
                         <li>Configured Omni-Channel routing to efficiently distribute incoming cases to the appropriate support agents, reducing case queue times.</li>
                         <li>Implemented Service Level Agreements (SLAs) and escalation rules to ensure timely resolution of critical customer issues.</li>
@@ -474,7 +567,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+    <section id="education" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
         <div class="container mx-auto">
             <h2 class="section-title">EDUCATION</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-xl text-gray-700 pt-4">
@@ -493,7 +586,7 @@
     </section>
 
     <!-- Activities and Honors Section -->
-    <section id="activities" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+    <section id="activities" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
         <div class="container mx-auto">
             <h2 class="section-title">ACTIVITIES & HONORS</h2>
             <div class="card text-xl text-gray-700 pt-4">
@@ -507,7 +600,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-28 px-8 section-white max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
+    <section id="contact" class="py-28 px-8 section-light max-w-7xl mx-auto my-20 rounded-2xl shadow-xl">
         <div class="container mx-auto text-center">
             <h2 class="section-title">GET IN TOUCH</h2>
             <p class="text-xl text-gray-700 mb-12 pt-4">
@@ -527,9 +620,38 @@
     <footer class="bg-gray-900 text-white py-14 px-8 text-center">
         <div class="container mx-auto">
             <p class="text-lg">&copy; 2025 Christiana Nwabudike. All rights reserved.</p>
-            <p class="text-sm mt-4">Built with Tailwind CSS</p>
         </div>
     </footer>
 
+    <script>
+        // JavaScript for active navigation link highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const options = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px', // Adjusted to activate when middle of section is in view
+                threshold: 0 // Threshold doesn't matter much with adjusted rootMargin
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const targetId = entry.target.id;
+                        const activeLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
