@@ -64,6 +64,7 @@
             position: relative;
             z-index: 10; /* Ensures content is on top */
             text-shadow: 3px 3px 15px rgba(0, 0, 0, 1); /* Even stronger text shadow for legibility */
+            margin-top: 100px; /* Adjusted to move content further down */
         }
 
         /* Hero image specific animation */
@@ -195,7 +196,7 @@
 
     <!-- Header Section (Navigation) -->
     <header class="header-bg text-white shadow-lg">
-        <nav class="container mx-auto px-8 py-4 flex flex-col sm:flex-row justify-between items-center">
+        <nav class="container mx-auto px-8 py-2 flex flex-col sm:flex-row justify-between items-center">
             <div class="text-4xl font-extrabold tracking-wider">
                 Christiana Nwabudike
             </div>
@@ -212,7 +213,7 @@
 
     <!-- Hero Section (Dynamic Banner with your image) -->
     <section class="hero-section">
-        <img src="https://raw.githubusercontent.com/cristiana-nwabudike/Christiana/main/Portfolio%20Image.png" alt="Salesforce and nCino background" class="hero-background-image">
+        <img src="https://raw.githubusercontent.com/cristiana-nwabudike/Christiana/main/Portfolio%20Image2.png" alt="Salesforce and nCino background" class="hero-background-image">
         <div class="hero-overlay"></div> <!-- Overlay for text legibility -->
         <div class="hero-content">
             <h1 class="text-7xl md:text-8xl font-extrabold leading-tight mb-8">
@@ -280,7 +281,7 @@
                         <li>Data Quality & Governance</li>
                     </ul>
                 </div>
-                <div class="card">
+                <div class="card col-span-1 md:col-span-2 lg:col-span-1">
                     <h3 class="sub-section-title">Documentation & Project Management</h3>
                     <ul class="list-item-bullet">
                         <li>Process Mapping, User Guide Document</li>
@@ -501,6 +502,7 @@
                     <li>48 Superbadges</li>
                     <li>Double Star Ranger</li>
                 </ul>
+
             </div>
         </div>
     </section>
@@ -526,6 +528,7 @@
     <footer class="bg-gray-900 text-white py-14 px-8 text-center">
         <div class="container mx-auto">
             <p class="text-lg">&copy; 2025 Christiana Nwabudike. All rights reserved.</p>
+            <p class="text-sm mt-4">Built with Tailwind CSS</p>
         </div>
     </footer>
 
